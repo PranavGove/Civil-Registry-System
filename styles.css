@@ -110,3 +110,8 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #f1f1f1 !important; 
 }
+form .error-message {
+    color: red !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+}

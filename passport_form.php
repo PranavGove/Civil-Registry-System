@@ -44,7 +44,8 @@ if (isset($_POST['submit_passport'])) {
     
     $sql = "INSERT INTO applications (user_id, type, data) VALUES ('$user_id', 'passport', '$data')";
     if ($conn->query($sql) === TRUE) {
-        $message = "Passport application submitted successfully.";
+        header("Location: success.php");
+    
     } else {
         $message = "Error: " . $sql . "<br>" . $conn->error;
     }
