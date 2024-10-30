@@ -6,28 +6,27 @@ Web Based Civil Registry System (Civil Registry is the online system or agency t
 
 1.download and setup wampserver (refer youtube for how to )
 
+
+
+
 2.start the wampserver and make sure all the services are running (refer youtube)
+
+
+
 
 3.open phpmyadmin through wampserver and paste the following code to design a database in sql section in navigation panel : 
 
--- Step 1: Drop the old database if it exists
+
+
 DROP DATABASE IF EXISTS civil_registry;
-
--- Step 2: Create the new database
 CREATE DATABASE civil_registry;
-
--- Step 3: Switch to the new database
 USE civil_registry;
-
--- Step 4: Create the users table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100),
     password VARCHAR(100),
     role ENUM('admin', 'applicant')
 );
-
--- Step 5: Create the applications table with updated status field
 CREATE TABLE applications (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -38,15 +37,24 @@ CREATE TABLE applications (
 );
 
 
-4.go to folder named www on your system inside wamp64 folder usually located at C:\wamp64\www\ and create folder named "civil_registry" inside this create folder named "uploads" and now open civil_registry folder in vs code now copy the following command : 
+
+
+
+4.go to folder named www on your system inside wamp64 folder usually located at C:\wamp64\www\ and create folder named "civil_registry" inside this create folder named "uploads" and now open civil_registry folder in vs code now copy the following command and paste in terminal of vs code: 
 
 
 git clone https://github.com/PranavGove/Civil-Registry-System.git
 
 
+
+
+
 5.open your browser and paste this 
 
 http://localhost:80/civil_registry 
+
+
+
 
 
 THAT'S IT !
