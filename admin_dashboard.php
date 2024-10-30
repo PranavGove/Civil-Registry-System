@@ -33,15 +33,15 @@
                             <tr>
                                 <th>Applicant Name</th>
                                 <th>Details</th>
-                                <th>Status</th>
-                                <th>Action</th>
                                 <th>Documents</th>
+                                <th>Status</th>
                             </tr>";
                     while ($app = $result->fetch_assoc()) {
                         $data = json_decode($app['data'], true); 
                         $details = '';
                         $documents = '';
 
+                        // Display applicant details based on the application type
                         switch ($type) {
                             case 'passport':
                                 $details = "First Name: {$data['first_name']}<br>
@@ -64,12 +64,23 @@
                                 break;
                         }
 
+                        // Dropdown to select status
                         echo "<tr>
                                 <td>{$app['username']}</td>
                                 <td>$details</td>
-                                <td>{$app['status']}</td>
-                                <td><a href='approve.php?id={$app['id']}'>Approve</a></td>
                                 <td>$documents</td>
+                                <td>
+                                    <form action='update_status.php' method='POST'>
+                                        <input type='hidden' name='application_id' value='{$app['id']}'>
+                                        <input type='hidden' name='type' value='$type'>
+                                        <select name='status' onchange='this.form.submit()'>
+                                            <option value='verifying documents' " . ($app['status'] == 'verifying documents' ? "selected" : "") . ">Verifying Documents</option>
+                                            <option value='checking background' " . ($app['status'] == 'checking background' ? "selected" : "") . ">Checking Background</option>
+                                            <option value='in final review' " . ($app['status'] == 'in final review' ? "selected" : "") . ">In Final Review</option>
+                                            <option value='approved' " . ($app['status'] == 'approved' ? "selected" : "") . ">Approved</option>
+                                        </select>
+                                    </form>
+                                </td>
                               </tr>";
                     }
                     echo "</table>";
