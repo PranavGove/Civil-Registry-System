@@ -41,7 +41,7 @@ CREATE TABLE applications (
 4.go to folder named www on your system inside wamp64 folder usually located at C:\wamp64\www\ and create folder named "civil_registry" inside this create folder named "uploads" and now open civil_registry folder in vs code now copy the following command : 
 
 
-https://github.com/PranavGove/Civil-Registry-System.git
+git clone https://github.com/PranavGove/Civil-Registry-System.git
 
 
 5.open your browser and paste this 
