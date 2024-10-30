@@ -60,12 +60,14 @@ http://localhost:80/civil_registry
 THAT'S IT !
 
 # Screenshots 
-![image](https://github.com/user-attachments/assets/5e586405-d0ee-4a80-b0cc-9068a699a2ce)
+applicant features:
 ![image](https://github.com/user-attachments/assets/dec43d75-14bf-4bae-a692-b3d4167cfdba)
+![image](https://github.com/user-attachments/assets/5e586405-d0ee-4a80-b0cc-9068a699a2ce)
 ![image](https://github.com/user-attachments/assets/a1ac5889-97fa-47c5-a48e-c3358b35b3e3)
 ![image](https://github.com/user-attachments/assets/56501a1e-5d6a-4ccb-8979-dfa5e4be2db2)
-![image](https://github.com/user-attachments/assets/1dd79864-e4d6-4752-ad06-e82d532cc8c1)
 ![image](https://github.com/user-attachments/assets/8b14b9ce-91f3-43df-a3c1-91866614f054)
 
+admin features
+![image](https://github.com/user-attachments/assets/1dd79864-e4d6-4752-ad06-e82d532cc8c1)
 
 
